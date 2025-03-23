@@ -6,7 +6,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.newsapplication.models.ApiResponseNews
-import com.example.newsapplication.models.News
+
+import com.example.newsapplication.models.NewsModel
 import com.example.newsapplication.repository.NewsRepository
 
 import kotlinx.coroutines.launch
@@ -18,8 +19,8 @@ class NewsViewModel : ViewModel() {
     private val _newsResponse = MutableLiveData<Response<ApiResponseNews>>()
     val newsResponse: LiveData<Response<ApiResponseNews>> get() = _newsResponse
 
-    private val _newsList = MutableLiveData<List<News>>()
-    val newsList: LiveData<List<News>> get() = _newsList
+    private val _newsList = MutableLiveData<List<NewsModel>>()
+    val newsList: LiveData<List<NewsModel>> get() = _newsList
 
     fun fetchNews() {
         viewModelScope.launch {

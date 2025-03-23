@@ -24,7 +24,7 @@
         android:inputType="textPassword" />
 
     <CheckBox
-        android:id="@+id/checkBoxSave"
+        android:id="@+id/checkBoxSavePassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Сохранить пароль" />

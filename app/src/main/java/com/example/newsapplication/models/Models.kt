@@ -19,7 +19,7 @@ data class ApiResponse(
 
 data class ApiResponseNews(
     val status: String,
-    val news: List<News>?
+    val news: List<NewsModel>?
 )
 
 data class User(
@@ -29,10 +29,3 @@ data class User(
     val created_at: String
 )
 
-data class News(
-    val id: Int,
-    val title: String,
-    val text: String,
-    val image: String,
-    val created_at: String
-)

@@ -1,21 +1,15 @@
 package com.example.newsapplication
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-
-
+import androidx.appcompat.widget.Toolbar
 import android.widget.Toast
 import androidx.activity.viewModels
-
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newsapplication.viewmodel.NewsViewModel
 
-
-class NewsActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     private val newsViewModel: NewsViewModel by viewModels()
     private lateinit var recyclerView: RecyclerView
@@ -24,6 +18,9 @@ class NewsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
 
         recyclerView = findViewById(R.id.recyclerViewNews)
         recyclerView.layoutManager = LinearLayoutManager(this)

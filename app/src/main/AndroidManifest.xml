@@ -17,7 +17,10 @@
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".NewsActivity"
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NewsDetailActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
